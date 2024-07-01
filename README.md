@@ -76,3 +76,7 @@ curl -X POST http://localhost:5000/run_pipeline
 ## Differential Expression Analysis
 - Perform differential expression analysis to identify genes that are differentially expressed between conditions.
 
+## Credits
+This pipeline was developed by Saurav Anand. Contributions and feedback are welcome.
+
+For more information, refer to the individual script comments and documentation within this repository.
