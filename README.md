@@ -65,14 +65,14 @@ python3 app.py
 curl -X POST http://localhost:5000/run_pipeline
 ```
 ## Preprocessing
--Preprocess raw FASTQ files using fastp for quality control and trimming.
+- Preprocess raw FASTQ files using fastp for quality control and trimming.
 
 ## Read Alignment
--Align trimmed reads to the reference genome using hisat2.
+- Align trimmed reads to the reference genome using hisat2.
 
 ## Quantify Expression
--Count the number of reads aligned to each gene using featureCounts.
+- Count the number of reads aligned to each gene using featureCounts.
 
-### Differential Expression Analysis
--Perform differential expression analysis to identify genes that are differentially expressed between conditions.
+## Differential Expression Analysis
+- Perform differential expression analysis to identify genes that are differentially expressed between conditions.
 
