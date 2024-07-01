@@ -11,8 +11,6 @@ This repository contains an RNA-seq pipeline for processing RNA sequencing data,
   - [Read Alignment](#read-alignment)
   - [Quantify Expression](#quantify-expression)
   - [Differential Expression Analysis](#differential-expression-analysis)
-  - [Significant Genes](#significant-genes)
-  - [Functional Analysis](#functional-analysis)
 - [File Descriptions](#file-descriptions)
 - [Credits](#credits)
 
@@ -39,5 +37,43 @@ This RNA-seq pipeline processes raw RNA sequencing data to identify differential
 ```bash
 pip install -r requirements.txt
 ```
-;ljadsnhcakldn
+
+### Install External Tools
+
+```bash
+# Install fastp
+sudo apt-get update
+sudo apt-get install -y fastp
+
+# Install HISAT2
+sudo apt-get install -y hisat2
+
+# Install Subread (which includes featureCounts)
+sudo apt-get install -y subread
+```
+
+## usage
+### Create the uploads Directory
+
+-Upload the the fasta files in the uploads folder
+```bash
+mkdir uploads
+```
+
+### Run the pipeline
+```bash
+python3 app.py
+curl -X POST http://localhost:5000/run_pipeline
+```
+### Preprocess
+-Preprocess raw FASTQ files using fastp for quality control and trimming.
+
+### align_reads
+-Align trimmed reads to the reference genome using hisat2.
+
+### Quantify Expression
+-Count the number of reads aligned to each gene using featureCounts.
+
+### Differential Expression Analysis
+-Perform differential expression analysis to identify genes that are differentially expressed between conditions.
 
