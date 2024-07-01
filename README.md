@@ -51,7 +51,7 @@ sudo apt-get install -y hisat2
 sudo apt-get install -y subread
 ```
 
-## usage
+## Usage
 ### Create the uploads Directory
 
 -Upload the the fasta files in the uploads folder
