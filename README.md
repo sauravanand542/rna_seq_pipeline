@@ -11,6 +11,8 @@ This repository contains an RNA-seq pipeline for processing RNA sequencing data,
   - [Read Alignment](#read-alignment)
   - [Quantify Expression](#quantify-expression)
   - [Differential Expression Analysis](#differential-expression-analysis)
+  - [Application file](#app)
+- [Interpreting Differential Expression Results](#results)
 - [Credits](#credits)
 
 ## Overview
@@ -65,16 +67,26 @@ python3 app.py
 curl -X POST http://localhost:5000/run_pipeline
 ```
 ## Preprocessing
-- Preprocess raw FASTQ files using fastp for quality control and trimming.
+This script uses fastp to perform quality control and trimming on raw FASTQ files. The script scans the uploads folder for input files, processes them, and saves the output to the preprocess folder.
 
 ## Read Alignment
-- Align trimmed reads to the reference genome using hisat2.
+This script uses hisat2 to align the trimmed reads to the reference genome. It reads the trimmed files from the preprocess folder, aligns them to a reference genome (which should be indexed beforehand), and saves the output to the align_reads folder.
 
 ## Quantify Expression
-- Count the number of reads aligned to each gene using featureCounts.
+This script uses featureCounts to count the number of reads aligned to each gene. It processes the aligned read files from the align_reads folder and generates a count matrix, which is saved to the quantify_expression folder.
 
 ## Differential Expression Analysis
-- Perform differential expression analysis to identify genes that are differentially expressed between conditions.
+This script performs differential expression analysis using OLS regression. It reads the count matrix and the conditions.csv file to identify differentially expressed genes between conditions. The results, including regression summaries, are saved in the differential_expression folder.
+
+## Application file
+This script creates a Flask web application to run the pipeline through a web interface. Users can upload their raw FASTQ files to the uploads folder and trigger the pipeline by sending a POST request to the server.
+
+## Interpreting Differential Expression Results
+Let's say the differential_expression_results.csv file contains the following data:
+
+gene	coef	p-value	r-squared
+gene1	2.0	0.01	0.85
+gene2	-1.5	0.03	0.90
 
 ## Credits
 This pipeline was developed by Saurav Anand. Contributions and feedback are welcome.
