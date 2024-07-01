@@ -64,7 +64,7 @@ mkdir uploads
 python3 app.py
 curl -X POST http://localhost:5000/run_pipeline
 ```
-## Preprocess
+## Preprocessing
 -Preprocess raw FASTQ files using fastp for quality control and trimming.
 
 ## Read Alignment
