@@ -38,21 +38,6 @@ This RNA-seq pipeline processes raw RNA sequencing data to identify differential
 
 ```bash
 pip install -r requirements.txt
-
-
-**### Install Python Packages**
-
-```bash
-pip install -r requirements.txt
-
-```bash
-# Install fastp
-sudo apt-get update
-sudo apt-get install -y fastp
-
-# Install HISAT2
-sudo apt-get install -y hisat2
-
-# Install Subread (which includes featureCounts)
-sudo apt-get install -y subread
+```
+;ljadsnhcakldn
 
