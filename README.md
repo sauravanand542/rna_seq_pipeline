@@ -83,10 +83,19 @@ This script creates a Flask web application to run the pipeline through a web in
 
 ## Interpreting Differential Expression Results
 Let's say the differential_expression_results.csv file contains the following data:
+![image](https://github.com/sauravanand542/rna_seq_pipeline/assets/65894291/8c6aacd1-f4f8-43fd-89e8-bca3446d7cfd)
 
-gene	coef	p-value	r-squared
-gene1	2.0	0.01	0.85
-gene2	-1.5	0.03	0.90
+### Interpretation
+- Coefficient (coef): Indicates the effect size of the condition on gene expression. A positive value means the condition increases gene expression, while a negative value means it decreases expression.
+- P-value (p-value): Indicates the statistical significance of the effect. A lower p-value (< 0.05) indicates a significant effect.
+- R-squared (r-squared): Indicates the proportion of variance in gene expression explained by the condition. A value closer to 1 means a better fit.
+
+#### Example Interpretation
+- For gene1, the condition increases its expression by 2 units on average, with a p-value of 0.01, indicating significant differential expression. The condition explains 85% of the variance in gene expression.
+- For gene2, the condition decreases its expression by 1.5 units on average, with a p-value of 0.03, indicating significant differential expression. The condition explains 90% of the variance in gene expression.
+
+
+
 
 ## Credits
 This pipeline was developed by Saurav Anand. Contributions and feedback are welcome.
