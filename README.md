@@ -12,7 +12,7 @@ This repository contains an RNA-seq pipeline for processing RNA sequencing data,
   - [Quantify Expression](#quantify-expression)
   - [Differential Expression Analysis](#differential-expression-analysis)
   - [Application file](#app)
-- [Interpreting Differential Expression Results](#results)
+- [Interpreting Differential Expression Results](#results)(#Interpreting-Differential-Expression-Results)
 - [Credits](#credits)
 
 ## Overview
