@@ -64,13 +64,13 @@ mkdir uploads
 python3 app.py
 curl -X POST http://localhost:5000/run_pipeline
 ```
-### Preprocess
+## Preprocess
 -Preprocess raw FASTQ files using fastp for quality control and trimming.
 
-### align_reads
+## Read Alignment
 -Align trimmed reads to the reference genome using hisat2.
 
-### Quantify Expression
+## Quantify Expression
 -Count the number of reads aligned to each gene using featureCounts.
 
 ### Differential Expression Analysis
