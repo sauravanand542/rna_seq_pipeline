@@ -39,7 +39,11 @@ This RNA-seq pipeline processes raw RNA sequencing data to identify differential
 ```bash
 pip install -r requirements.txt
 
-### Install external tools
+
+**### Install Python Packages**
+
+```bash
+pip install -r requirements.txt
 
 ```bash
 # Install fastp
